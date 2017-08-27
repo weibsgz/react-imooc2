@@ -9,7 +9,7 @@ import BodyIndex from './components/body.js'
 //     document.getElementById('example')
 // )
 
-class Index extends React.Component {
+class Index extends React.Component {   
     componentWillMount(){
         console.log('Index - componentWillMount')
     }

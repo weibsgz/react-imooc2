@@ -21,6 +21,10 @@ const buttonDis = true;
 const html = "abcdefg &nbsp; daf;kdasf"
 
 export default class BodyIndex extends React.Component{
+    constructor(){
+        super();
+        this.state = user
+    }
     componentWillMount(){
         console.log('bodyIndex - componentWillMount')
     }
@@ -29,12 +33,19 @@ export default class BodyIndex extends React.Component{
          console.log('bodyIndex - componentDidMount')
     }
     render(){
+        setTimeout(()=>{
+            this.setState({
+                firstName: 'weibin',
+                lastName: 'Perez'
+            })
+        },3000)
         return (
             <div>
                 <h1>this is body {getGreeting(user)}</h1>
                 <input type='button' value='click' disabled={buttonDis}/>
                 {/**/}
                 <p dangerouslySetInnerHTML={{__html:html}}></p>
+                <p>hello , {this.state.firstName}</p>
             </div>
         )
     }
